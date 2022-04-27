@@ -1,0 +1,23 @@
+<div style="background-color: black;">
+    <button type="submit" class="btn btn-danger logout" (click)="logout()"> Log Out </button>
+    <button (click)="updateFiles" class="btn btn-danger update">Actualizar Archivos</button>
+    <!-- <button type="submit" class="btn btn-danger logout2 " (click)="logout()"> Aqui va para descargar </button> -->
+    <select name="haar" class="selector" (change)="selectChangeHandlerHaar($event)">
+      <option value="face">Caras</option>
+      <option value="cat">Gatos</option>
+      <option value="no">Ninguno</option>
+    </select>
+
+    <select name="haar" (change)="selectChangeHandlerDownload($event)" class="update2">
+      <option *ngFor="let file of files" value={{file}}>{{file}}</option>
+    </select>
+    <button class="btn btn-danger update3" (click)="descargar()">Descargar</button>
+
+    <img src={{address}} class="securitycamera mx-auto d-block">
+
+    
+    
+
+</div>
+
+
